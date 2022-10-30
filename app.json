@@ -1,37 +1,37 @@
 {
-  "name": "KatilMusicX",
-  "logo": "https://telegra.ph/file/2258849c8eef00541084c.jpg",
+  "name": "JAVA Music ",
+  "logo": "https://telegra.ph/file/9870433b0c155ecf2ad07.png",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
   "repository": "https://github.com/bhumiharsaurabh/katilmusicx",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram session string",
+      "description": "كود بايروجرام",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "A bot token from @BotFather",
+      "description": "توكن البوت اللي صنعته من @BotFather",
       "required": true
     },
     "BOT_USERNAME": {
-      "description": "fill with your bot username from @BotFather but without using '@' symbol",
+      "description": "معرف بوتك بدون '@'",
       "required": true
     },
     "API_ID": {
-      "description": "App ID from my.telegram.org/apps",
+      "description": "ايبي ايدي  تجيبه من هنا my.telegram.org/apps",
       "required": true
     },
     "API_HASH": {
-      "description": "App hash from my.telegram.org/apps",
+      "description": "ايبي هاش  تجيبه من هنا my.telegram.org/apps",
       "required": true
     },
     "OWNER_USERNAME": {
-      "description": "fill with your telegram account username without @",
+      "description": "معرفك بدون @",
       "required": true
     },
     "SUDO_USERS": {
-      "description": "List of user IDs counted as admin everywhere (separated by space).",
+      "description": "ايدي الادمنيه (مفصولة بمسافة).",
       "required": true
     },
     "DURATION_LIMIT": {

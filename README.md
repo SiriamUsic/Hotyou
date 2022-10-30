@@ -1,7 +1,7 @@
 # katilmusicx
 MUSIC PLAYER FOT TELEGRAM
 
-# VAISHU MUSICX
+# Java Music
 
 ### Best Smart Voice Chat Music Robot For Telegram Groups ....
 
@@ -48,16 +48,16 @@ Give us a star and fork our repo
   
 ### Noob Developers 
   
-<a href="https://t.me/tera_baap_katil"><img src="https://img.shields.io/badge/KATIL-ReD.svg?style=for-the-badge&logo=Python"></a> 
+<a href="https://t.me/JAVA_Supports"><img src="https://img.shields.io/badge/KATIL-ReD.svg?style=for-the-badge&logo=Python"></a> 
   
   
 
 ## Support & Updates 
-<a href="https://t.me/FULL_MASTI_CLUBS"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/HEARTBROKENPERSON1"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/JAVA_Supports"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/JAVA_telthon"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
   
 # Support Us
   
   
 - Click Here 👇🏻 and Join Please
   
-  [![TMC EMPIRES](LOGO)](https://t.me/TMC_EMPIRES)
+  [![TMC EMPIRES](LOGO)](https://t.me/Salah_officiall)
