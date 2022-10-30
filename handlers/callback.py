@@ -10,22 +10,21 @@ from config import (
 async def start_op(_, query: CallbackQuery):
     await query.answer("Bot Started")
     await query.edit_message_text(
-              f"""**Hello, Welcome {message.from_user.mention()}\n
-I am powerful easy to use TeleGram Super Bot. I can play high quality and unbreakable music in your group voice chat. Just add me and promote with needed powers.\n
-Use Inline buttons for more !!
-For Help : @HEARTBROKENPERSON1**""",
+              f"""**مرحبا عزيزي {message.from_user.mention()}\n
+أنا قوي وسهل الاستخدام، يمكنني تشغيل موسيقى عالية الجودة بدون تقطيع في الدردشة الصوتية الجماعية. فقط أضفني الى مجموعتك وقم بإعطائي جميع الصلاحيات ما عدا "التخفي".\n
+اعرف المزيد من خلال الازرار الموجوده بالاسفل !!**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("✚ Add me to your Group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                    InlineKeyboardButton("🔍 طريقه تشغيل البوت", callback_data="cb_cmd")
                 ],[
-                    InlineKeyboardButton("👤 Bot Owner", url=f"https://t.me/{OWNER_USERNAME}"),
-                    InlineKeyboardButton("📢 Source Code", url=f"https://github.com/bhumiharsaurabh/katilmusicx")
+                    InlineKeyboardButton("مطور البوت", url=f"https://t.me/{OWNER_USERNAME}"),
+                    InlineKeyboardButton("𝐒𝐀𝑳𝐀𝐇 𝐇𝐄𝐌𝐃𝐀𝐍", url=f"https://t.me/Salah_officiall")
                 ],[
-                    InlineKeyboardButton("📨 Support", url=f"https://t.me/full_masti_clubs"),
-                    InlineKeyboardButton("📨 Updates", url=f"https://t.me/heartbrokenperson1")
+                    InlineKeyboardButton("𝐉𝐀𝐕𝐀 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url=f"https://t.me/JAVA_Supports"),
+                    InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀", url=f"https://t.me/JAVA_tlethon")
                 ],[
-                    InlineKeyboardButton("🔍 How To Use? Commands", callback_data="cb_cmd")
+                    InlineKeyboardButton("➕ ضيفني لمجموعتك", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],
             ]
         ),
@@ -35,29 +34,29 @@ For Help : @HEARTBROKENPERSON1**""",
 @Client.on_callback_query(filters.regex("cb_cmd"))
 async def cbcmd(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**🤖 Normal Bot Commands :-
+        f"""**🤖 أوامر البوت العادية :-
 
-» /play - (song name) 
-» /skip - Skip the Song
-» /end - Stop Playing Music
-» /pause - Pause the track
-» /resume - Resumes the Track
-» /mute - Mute the Assistant 
-» /search - (song name)
-
-
-
-⚙ Some Extra Commands :-
-
-» /ping - Shows the Ping Status
-» /start - Starts the Bot
-» /id - Get the ID
-» /repo - Get the source code 
-» /rmd - Clean all the downloads
-» /clean - Clean the Storage
-» /gcast - broadcast your message 
+» /play او تشغيل و (اسم الاغنيه)  - لتشغيل الموسيقي
+» /skip - تخطي الأغنية
+» /end - ايقاف تشغيل الموسيقى
+» /pause - أوقف التشغيل مؤقتًا
+» /resume - استئناف التشغيل
+» /mute - كتم المساعد 
+» /search - (إسم الأغنية)
 
 
-🌀 Powered By : @heartbrokenperson1**""",
+
+⚙ بعض الأوامر الإضافية :-
+
+» /examine - لاختبار حالة تشغيل البوت
+» /start - بدأ البوت
+» /id - لجلب ايديك
+» /repo - لجلب كود مصدر السورس
+» /rmd - حذف كل التنزيلات
+» /clean - نظف ملفات التخزين
+» /gcast - بث رسالتك
+
+
+𓆩𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀𓆪 ](https://t.me/JAVA_tlethon)**""",
     )
 

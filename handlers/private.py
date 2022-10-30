@@ -13,45 +13,48 @@ from config import (
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
      await message.reply_photo(
-        photo=f"https://telegra.ph/file/2258849c8eef00541084c.jpg",
-        caption=f"""**𝐓𝐡𝐢𝐬 𝐈𝐬 𝐀𝐝𝐯𝐚𝐧𝐜𝐞 🥀𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐌𝐮𝐬𝐢𝐜 🎶 𝐁𝐨𝐭 𝐑𝐮𝐧 𝐎𝐧 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 🥀 𝐕𝐩𝐬 💫𝐒𝐞𝐫𝐯𝐞𝐫 🌎 𝐅𝐞𝐞𝐥 ❤️ 𝐇𝐢𝐠𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐌𝐮𝐬𝐢𝐜 🎧 𝐈𝐧 𝐕𝐜 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 = [༒︎★•亗『𝐊𝐀𝐓𝐈𝐋』亗•★ ](https://t.me/tera_baap_katil)
+        photo=f"https://telegra.ph/file/9cbae99908382932e51f0.png",
+        caption=f"""**•══•| [ 𓆩𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀𓆪 ](https://t.me/JAVA_tlethon) |•══• 
         
-        
-𝐈𝐟 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀𝐧𝐲 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐀𝐧𝐝 𝐇𝐞𝐥𝐩 𝐓𝐡𝐞𝐧 𝐃𝐦 𝐌𝐲 𝐁𝐨𝐬𝐬 = [༒︎★•亗『𝐊𝐀𝐓𝐈𝐋』亗•★ ](https://t.me/tera_baap_katil)**""",
+✨ مرحبا عزيزي صـلاح - ᥉ᥲ️ᥣᥲ️ꫝ { مشغول },.↻!
+
+💭 انا بوت استطيع تشغيل الموسيقي والفديو في محادثتك الصوتية
+
+•══•| 𓆩𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀𓆪 ](https://t.me/JAVA_tlethon)|•══•**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("✚ Add me to your Group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                    InlineKeyboardButton("🔍 طريقه تشغيل البوت", callback_data="cb_cmd")
                 ],[
-                    InlineKeyboardButton("👤 𝐂𝐫𝐞𝐚𝐭𝐨𝐫", url=f"https://t.me/{OWNER_USERNAME}"),
-                    InlineKeyboardButton("⚙️ 𝐒𝐨𝐮𝐫𝐜𝐞 ", url=f"https://github.com/bhumiharsaurabh/katilmusicx")
+                    InlineKeyboardButton("👤 مطور البوت", url=f"https://t.me/{OWNER_USERNAME}"),
+                    InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀 ", url=f"https://t.me/JAVA_tlethon")
                 ],[
-                    InlineKeyboardButton("📨 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 ", url=f"https://t.me/full_masti_clubs"),
-                    InlineKeyboardButton("📨 Updates", url=f"https://t.me/heartbrokenperson1")
+                    InlineKeyboardButton("𝐉𝐀𝐕𝐀 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url=f"https://t.me/JAVA_Supports"),
+                    InlineKeyboardButton("𝐒𝐀𝑳𝐀𝐇 𝐇𝐄𝐌𝐃𝐀𝐍", url=f"https://t.me/Salah_officiall")
                 ],[
-                    InlineKeyboardButton("🔍 How To Use? Commands", callback_data="cb_cmd")
+                    InlineKeyboardButton("✚ ضيفني لمجموعتك", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],
             ]
         ),
     )
 
 
-@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["examine", f"examine@{BOT_USERNAME}", "فحص"]) & ~filters.edited)
 async def ping_pong(c: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("pinging...")
+    m_reply = await message.reply_text("جاري فحص البوت...")
     delta_ping = time() - start
-    await m_reply.edit_text("**× I am Alive ×**\n\n@heartbrokenperson1 📡")
+    await m_reply.edit_text("**× انا اعمل بالفعل ×**\n\n@JAVA_Supports 📡")
 
 
 @Client.on_message(command(["repo"]) & ~filters.edited)
 async def help(client: Client, message: Message):
-    await message.reply_text("`Click on the Button given below to Get the Bot Source Code.`",
+    await message.reply_text("`انقر فوق الزر الموضح أدناه للحصول على شفرة مصدر سورس البوت`",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⚙️ 𝐒𝐨𝐮𝐫𝐜𝐞 ", url=f"https://github.com/bhumiharsaurabh/katilmusicx")
+                        "⚙️ 𝐒𝐨𝐮𝐫𝐜𝐞 ", url=f"https://t.m/JAVA_Supports")
                 ]
             ]
         ),

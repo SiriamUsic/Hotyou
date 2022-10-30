@@ -88,7 +88,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 @Client.on_message(
-    command(["play"])
+    command(["play", "تشغيل ", "سحس", "شغل"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
@@ -98,7 +98,7 @@ async def play(_, message: Message):
     global que
     global useer
 
-    lel = await message.reply("🔎 **𝐅𝐢𝐧𝐝𝐢𝐧𝐠 💫 𝐓𝐡𝐞 𝐒𝐨𝐧𝐠 ❤️ ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★..**")
+    lel = await message.reply("🔎 **انتظر جاري البحث**")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -106,7 +106,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "@StrayCoder"
+        user.first_name = "@VP_FK"
     usar = user
     wew = usar.id
     try:
@@ -118,24 +118,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>𝐀𝐝 𝐌𝐞 😎 𝐀𝐬 𝐀𝐝𝐦𝐢𝐧 𝐎𝐟 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩 💫  𝐅𝐢𝐫𝐬𝐭 ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★</b>")
+                        "<b>ما ترفعني مشرف 🐥</b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★ 🎶 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐉𝐨𝐢𝐧𝐞𝐝 😎 🤟 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩  𝐅𝐨𝐫 𝐏𝐥𝐚𝐲 ▶ 𝐌𝐮𝐬𝐢𝐜 🎸**")
+                        message.chat.id, "**انضم المساعد للمحادثه الصوتيه 🎸**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>❰𝐅𝐥𝐨𝐨𝐝 😒 𝐖𝐚𝐢𝐭 𝐄𝐫𝐫𝐨𝐫  😔❱</b>\n𝐇𝐞𝐲 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 ❤️ 𝐂𝐨𝐮𝐥𝐝𝐧'𝐭 𝐉𝐨𝐢𝐧 𝐘𝐨𝐮𝐫 💫 𝐆𝐫𝐨𝐮𝐩  𝐃𝐮𝐞 𝐓𝐨 𝐇𝐞𝐚𝐯𝐲 𝐉𝐨𝐢𝐧 𝐑𝐞𝐐𝐮𝐞𝐬𝐭 🥀 . 𝐌𝐚𝐤𝐞 𝐒𝐮𝐫𝐞 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 💫 𝐈𝐬 𝐍𝐨𝐭 𝐁𝐚𝐧𝐧𝐞𝐝 😔 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 🎸  𝐀𝐧𝐝 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐋𝐚𝐭𝐞𝐫 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [༒︎★•亗『𝐊𝐀𝐓𝐈𝐋』亗•★ ](https://t.me/TERA_BAAP_KATIL) ❤️🥀 :)")
+                        f"<b>❰ حدث خطأ ❱</b>\nتعذر الحساب المساعد الانضمام إلى مجموعتك بسبب طلب الانضمام الكثيف ، تأكد من عدم حظر المساعد في المجموعة وحاول مرة أخرى او تواصل مع مبرمج البوت  :- ✨ [ مبرمج البوت ](https://t.me/Salah_officiall) ❤️🥀 :)")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>Hey {user.first_name}, 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 🎸 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 𝐈𝐬 𝐍𝐨𝐭 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐂𝐡𝐚𝐭' 𝐀𝐬𝐤 𝐀𝐝𝐦𝐢𝐧 😎 𝐓𝐨 𝐒𝐞𝐧𝐝 /Play 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 😎 𝐅𝐨𝐫 𝐅𝐢𝐫𝐬𝐭 𝐓𝐢𝐦𝐞 𝐓𝐨 𝐀𝐝𝐝 𝐈𝐭 𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 :- ✨ [༒︎★•亗『𝐊𝐀𝐓𝐈𝐋』亗•★ ](https://t.me/Tera_baap_katil) ❤️🥀 </i>")
+            f"<i>عزيزي {user.first_name}, \n الحساب المساعد مش في الجروب اكتب انضم ولو متضافش اتواصل مع المبرمج  :- ✨ [ التواصل مع المبرمج ](https://t.me/Salah_officiall) ❤️🥀 </i>")
         return
     
     audio = (
@@ -148,12 +148,12 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀❌"
+                f"الاغنيه اطول من {DURATION_LIMIT} دقيقه"
             )
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
+        thumb_name = "https://telegra.ph/file/9cbae99908382932e51f0.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -163,12 +163,12 @@ async def play(_, message: Message):
                 
                [
                     InlineKeyboardButton(
-                            text="📨𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/heartbrokenperson1"),
+                            text="𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀",
+                            url=f"https://t.me/JAVA_tlethon"),
                             
                     InlineKeyboardButton(
-                            text="📨𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            text="𝐉𝐀𝐕𝐀 𝐒𝐔𝐏𝐏𝐎𝐑𝐓",
+                            url=f"https://t.me/JAVA_Supports")
                ],
                
             ]
@@ -207,12 +207,12 @@ async def play(_, message: Message):
                 
                [
                     InlineKeyboardButton(
-                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            text="𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀",
+                            url=f"https://t.me/JAVA_tlethon"),
                             
                     InlineKeyboardButton(
-                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            text="𝐉𝐀𝐕𝐀 𝐒𝐔𝐏𝐏𝐎𝐑𝐓",
+                            url=f"https://t.me/JAVA_Supports")
                ],
                
             ]
@@ -220,7 +220,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/a67094fc4a99bca08114b.jpg"
+            thumb_name = "https://telegra.ph/file/9cbae99908382932e51f0.png"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -228,12 +228,12 @@ async def play(_, message: Message):
                 
                [
                     InlineKeyboardButton(
-                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            text="𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀",
+                            url=f"https://t.me/JAVA_tlethon"),
                             
                     InlineKeyboardButton(
-                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            text="𝐉𝐀𝐕𝐀 𝐒𝐔𝐏𝐏𝐎𝐑𝐓",
+                            url=f"https://t.me/JAVA_Supports")
                ],
                
             ]
@@ -241,7 +241,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀❌"
+                f"لا يسمح بتشغيل الاغنيه اللتي تزيد مدتها عن {DURATION_LIMIT} دقيقه"
             )
             return
         requested_by = message.from_user.first_name
@@ -250,9 +250,9 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "✌𝐖𝐡𝐚𝐭'𝐒 𝐓𝐡𝐞 ❤️ 𝐒𝐨𝐧𝐠 🎸 𝐘𝐨𝐮 🎧 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️"
+                "ما هي الأغنية التي تريد تشغيلها️"
             )
-        await lel.edit("**Processing 🔄 Please Wait !!**")
+        await lel.edit("**جارى المعالجة .. انتظر من فضلك !!**")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -277,7 +277,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "🌸° 𝐒𝐨𝐧𝐠 🎸 𝐍𝐨𝐭 😒 𝐅𝐨𝐮𝐧𝐝 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐏𝐫𝐨𝐛𝐥𝐞𝐦 ° 🥀."
+                "اكتب اسم الاغنيه صح يجاهل"
             )
             print(str(e))
             return
@@ -287,12 +287,12 @@ async def play(_, message: Message):
                 
                [
                     InlineKeyboardButton(
-                            text="📨 𝐂𝐡𝐚𝐧𝐧𝐞𝐥📡",
-                            url=f"https://t.me/HEARTBROKENPERSON1"),
+                            text="𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀",
+                            url=f"https://t.me/JAVA_tlethon"),
                             
                     InlineKeyboardButton(
-                            text="📨 𝐆𝐫𝐨𝐮𝐩⭐",
-                            url=f"https://t.me/FULL_MASTI_CLUBS")
+                            text="𝐉𝐀𝐕𝐀 𝐒𝐔𝐏𝐏𝐎𝐑𝐓",
+                            url=f"https://t.me/JAVA_Supports")
                ],
                
             ]
@@ -300,7 +300,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"❰ ° 𝐒𝐨𝐧𝐠 🎸 ° ❱ 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞'𝐒 𝐀𝐫𝐞𝐧'𝐭 𝐀𝐥𝐥𝐨𝐰𝐞𝐝 𝐓𝐨 𝐏𝐥𝐚𝐲 ▶ ❤️🥀❌"
+                f"لا يسمح بتشغيل الاغنيه اللتي تزيد مدتها عن {DURATION_LIMIT} دقيقه"
             )
             return
         requested_by = message.from_user.first_name
@@ -314,7 +314,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="****❰ ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★ ❱ 𝐒𝐨𝐧𝐠 ❤️ 𝐏𝐨𝐬𝐢𝐭𝐢𝐨𝐧 💫🤟** {}**\n𝗕𝘆 : @TMC_EMPIRES".format(position),
+            caption="**تم ايقاف التشغيل**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -331,7 +331,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**❰ ★𝐕𝐀𝐈𝐒𝐇𝐔♪♪𝐌𝐔𝐒𝐈𝐂'𝐗✌︎✌︎★ ❱ Now 😄 𝐏𝐥𝐚𝐲𝐢𝐧𝐠 📀 𝐀𝐭 🤟 `{}`...**\n𝗕𝘆 : @TMC_EMPIRES".format(
+            caption="**تم التشغيل**".format(
         message.chat.title
         ), )
 

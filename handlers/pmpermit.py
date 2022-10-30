@@ -18,7 +18,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "𝐇𝐢 𝐆𝐲𝐮𝐬𝐬 :) <𝟑\n𝐀𝐧𝐲 𝐇𝐞𝐥𝐩 𝐃𝐦 𝐌𝐲 𝐒𝐰𝐞𝐞𝐭 💜\n𝐌𝐚𝐬𝐭𝐞𝐫 🎸 :- [༒︎★•亗『𝐊𝐀𝐓𝐈𝐋』亗•★ ](https://t.me/tera_baap_katil) ❤️\n",
+                "مرحبا عزيزي اذا احتاجت مساعده تواصل مع مبرمجي\nالمبرمج :- [ صلاح حمدان ](https://t.me/Salah_officiall) ❤️\n",
             )
             return
 
@@ -32,11 +32,11 @@ async def bye(client: Client, message: Message):
         queryy = text[1]
         if queryy == "on":
             PMSET = True
-            await message.reply_text("PM Permit Enabled ✅")
+            await message.reply_text("تم تفعيل PM ✅")
             return
         if queryy == "off":
             PMSET = None
-            await message.reply_text("PM Permit Disabled ❌")
+            await message.reply_text("تم تعطيل PM ❌")
             return
 
 @USER.on_message(filters.text & filters.private & filters.me)        
@@ -44,7 +44,7 @@ async def autopmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("Auto Approved ❗...")
+        await message.reply_text("معتمد تلقائيًا ❗...")
         return
     message.continue_propagation()    
     
@@ -53,7 +53,7 @@ async def pmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if not chat_id in pchats:
         pchats.append(chat_id)
-        await message.reply_text("Approoved to PM ✅")
+        await message.reply_text("تمت الموافقة على PM ✅")
         return
     message.continue_propagation()    
     
@@ -63,6 +63,6 @@ async def rmpmPermiat(client: USER, message: Message):
     chat_id = message.chat.id
     if chat_id in pchats:
         pchats.remove(chat_id)
-        await message.reply_text("Dispprooved to PM ❌")
+        await message.reply_text("تم رفض PM ❌")
         return
     message.continue_propagation()

@@ -12,15 +12,15 @@ from config import (
 
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
-    await message.reply_text("**Thanks for adding me in your Group ❤️ Now promote me as administrator In this Chat with needed powers otherwise I am not able to work properly !!**",
+    await message.reply_text("**شكرا لإضافتي في مجموعتك ❤️ \nالآن قم بترقيتي كمسؤول في هذه الدردشة مع الصلاحيات المطلوبة وإلا فلن أتمكن من العمل بشكل صحيح !!**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⚙️ Source Code", url=f"https://github.com/bhumiharsaurabh/katilmusicx")
+                        "𝐒𝐀𝑳𝐀𝐇 𝐇𝐄𝐌𝐃𝐀𝐍", url=f"https://t.me/Salah_officiall")
                 ],[
-                    InlineKeyboardButton("📨 Support", url=f"https://t.me/full_masti_clubs"),
-                    InlineKeyboardButton("📨 Updates", url=f"https://t.me/heartbrokenperson1")
+                    InlineKeyboardButton("𝐉𝐀𝐕𝐀 𝐒𝐔𝐏𝐏𝐎𝐑𝐓", url=f"https://t.me/JAVA_Supports"),
+                    InlineKeyboardButton("𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀", url=f"https://t.me/JAVA_tlethon")
                   ],
             ]
         ),
